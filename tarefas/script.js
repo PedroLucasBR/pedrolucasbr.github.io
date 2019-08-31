@@ -2,7 +2,7 @@ var listaElementos = document.querySelector('#app ul');
 var inputElemento = document.querySelector('#app input');
 var botao = document.querySelector('#app button');
 
-var tarefas = JSON.parse(localStorage.getItem('lista_tarefas') || []);
+var tarefas = JSON.parse(localStorage.getItem('lista_tarefas')) || [];
 
 function renderizarTarefas() {
     listaElementos.innerHTML = '';
