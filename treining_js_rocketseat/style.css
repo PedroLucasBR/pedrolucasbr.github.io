@@ -10,13 +10,20 @@ body {
 
 h1 {
     text-align: center;
+    padding: 5px;
+    width: 400px;
+    margin: 20px auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(122, 96, 209, 0.400);
+    border-radius: 5px;
+    text-transform: uppercase;
 }
 
 div {
     width: auto;
     height: auto;
     font-family: sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 20px;

@@ -2,13 +2,7 @@ var listaElementos = document.querySelector('#app ul');
 var inputElemento = document.querySelector('#app input');
 var botao = document.querySelector('#app button');
 
-var tarefas = [
-    'Fazer café.',
-    'Atividade de Java Script.',
-    'Comprar materiais para contrução.',
-    'Pão de batata.',
-    'Me protejer do furacão.'
-];
+var tarefas = JSON.parse(localStorage.getItem('lista_tarefas'));
 
 function renderizarTarefas() {
     listaElementos.innerHTML = '';
@@ -43,6 +37,7 @@ function adicionarTarefas() {
         tarefas.push(textoTarefa);
         inputElemento.value = '';
         renderizarTarefas();
+        salvarTarefas();
     } else {
         inputElemento.setAttribute('placeholder', 'Digite algo aqui');
     }
@@ -53,4 +48,9 @@ botao.onclick = adicionarTarefas;
 function excluirTarefa(pos) {
     tarefas.splice(pos, 1)
     renderizarTarefas();
+    salvarTarefas();
+}
+
+function salvarTarefas() {
+    localStorage.setItem('lista_tarefas', JSON.stringify(tarefas));
 }
