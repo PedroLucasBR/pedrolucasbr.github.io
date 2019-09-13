@@ -1,0 +1,40 @@
+body {
+    background: #4fce5d;
+    font: normal 16pt Arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+    font: normal 40px Arial;
+    font-weight: bold;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+section {
+    background: white;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    margin: auto;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.100);
+}
+
+div {
+    padding: 10px;
+    text-align: center;
+}
+
+input {
+    font-size: 24px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+button {
+    margin: auto;
+    width: 70px;
+    height: 30px;
+    margin-top: 20px;
+}
