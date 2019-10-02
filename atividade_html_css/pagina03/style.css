@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif, "Roboto";
+}
+
+header {
+  display: flex;
+  font-family: "Amatic SC", cursive;
+  font-size: 120px;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #fff;
+  background-color: #51dacf;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://i.pinimg.com/564x/b4/31/c0/b431c040f7aa691c71d88bce347747d5.jpg");
+}
+
+#container {
+  max-width: 900px;
+  height: auto;
+  background-color: #d2fafb;
+  margin: 0 auto;
+}
+
+main {
+  float: left;
+  background-color: #d2fafb;
+  width: 80%;
+  height: 100%;
+}
+
+aside {
+  float: right;
+  background-color: #3c9d9b;
+  width: 20%;
+  height: 3450px;
+}
+
+footer {
+  clear: both;
+  background-color: #52de97;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 38px;
+  font-family: "Julius Sans One", sans-serif;
+}
+
+h3 {
+  font-size: 14px;
+  font-family: "Julius Sans One", sans-serif;
+}
+
+article {
+  padding: 20px;
+}
+
+article a {
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  border-radius: 4px;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: 400ms;
+}
+
+article p {
+  font-family: "Montserrat", sans-serif;
+  line-height: 22px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  transition: 600ms;
+  transform: scale(1.1);
+}
+
+article div {
+  max-height: 100%;
+  border: 2px solid black;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+article a:hover {
+  background-color: black;
+  color: #d2fafb;
+}
+
+hr {
+  width: 94%;
+  border-color: black;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+.pesquisar-txt {
+  margin: 5px;
+  margin-right: -2px;
+  max-width: 70%;
+  border: 0;
+  border-radius: 2px;
+}
+
+.pesquisar-btn {
+  background-color: white;
+  border: 0;
+  border-radius: 2px;
+}
+
+aside ul {
+  list-style-type: none;
+}
+
+aside li {
+  margin-left: -34px;
+  box-shadow: -2px 2px 15px -10px black;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+aside li a {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: bold;
+  color: #d2fafb;
+}
