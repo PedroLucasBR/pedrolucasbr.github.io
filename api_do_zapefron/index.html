@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>API do ZapEfron</title>
     <link rel="stylesheet" href="style.css">
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        Mensagem Zapironga ZapEfron
+      Mensagem Zapironga ZapEfron
     </header>
     <section>
-        <input type="text" id="numeroTxt" placeholder="Número">
-        <input type="text" placeholder="Mensagem" id="mensagemTxt">
-        <button id="butao"><a>Enviar</a></button>
+      <input type="tel" id="phone" placeholder="Número">
+      <input type="text" id="text" placeholder="Mensagem">
+      <button type="submit" onclick="enviar()">Enviar</button>
     </section>
-    </script>
+
     <script>
-        var numero = document.getElementById('numeroTxt');
-        var mensagem = document.getElementById('mensagemTxt');
-        var botao = document.getElementById('butao');
-        var a = document.querySelector('a');
+      function enviar() {
+        var data = {
+          phone: document.getElementById("phone").value,
+          text: document.getElementById("text").value
+        };
 
+        if (data.phone != '' && data.text != '') {
+          // cria uma url query a partir de um objeto
+          var params = new URLSearchParams(data).toString();
 
-        function enviar() {
-            if (numero.value != '' && mensagem.value != '') {
-                linkZap = 'https://api.whatsapp.com/send?phone=55' + numero.value + '&text=' + mensagem.value;
-                a.setAttribute('target', '_blank');
-                a.setAttribute('href', linkZap);
-            }
+          window.open(`https://api.whatsapp.com/send?${params}`);
         }
-
-        botao.onclick = enviar;
+      }
     </script>
-</body>
+  </body>
 
 </html>
