@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>API do ZapEfron</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
 
-  <body>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
     <header>
-      Mensagem Zapironga ZapEfron
+        Mensagem Zapironga ZapEfron
     </header>
     <section>
-      <input type="tel" id="phone" placeholder="Número">
-      <input type="text" id="text" placeholder="Mensagem">
-      <button type="submit" onclick="enviar()">Enviar</button>
+        <input type="tel" id="phone" placeholder="Número">
+        <input type="text" id="text" placeholder="Mensagem">
+        <button type="submit" onclick="enviar()">Enviar</button>
     </section>
 
     <script>
-      function enviar() {
-        var data = {
-          phone: document.getElementById("phone").value,
-          text: document.getElementById("text").value
-        };
+        function enviar() {
+            var data = {
+                phone: '55' + document.getElementById("phone").value,
+                text: document.getElementById("text").value
+            };
 
-        if (data.phone != '' && data.text != '') {
-          // cria uma url query a partir de um objeto
-          var params = new URLSearchParams(data).toString();
-
-          window.open(`https://api.whatsapp.com/send?${params}`);
+            if (data.phone != '' && data.text != '') {
+                const params = $.param(data);
+                window.open(`https://api.whatsapp.com/send?${params}`);
+            }
         }
-      }
     </script>
-  </body>
+</body>
 
 </html>
