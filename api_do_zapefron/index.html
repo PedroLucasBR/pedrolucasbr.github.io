@@ -1,39 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>API do ZapEfron</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
 
-  <body>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
     <header>
-      Mensagem Zapironga ZapEfron
+        Mensagem Zapironga ZapEfron
     </header>
     <section>
-      <input type="tel" id="phone" placeholder="Número">
-      <input type="text" id="text" placeholder="Mensagem">
-      <button type="submit" onclick="enviar()">Enviar</button>
+        <form action="https://api.whatsapp.com/send?" method="GET">
+            <input type="tel" name="phone" placeholder="Número">
+            <input type="text" name="text" placeholder="Mensagem">
+            <button type="submit">Enviar</button>
+        </form>
     </section>
-
-    <script>
-      function enviar() {
-        var data = {
-          phone: document.getElementById("phone").value,
-          text: document.getElementById("text").value
-        };
-
-        if (data.phone != '' && data.text != '') {
-          // cria uma url query a partir de um objeto
-          var params = new URLSearchParams(data).toString();
-
-          window.open(`https://api.whatsapp.com/send?${params}`);
-        }
-      }
-    </script>
-  </body>
+</body>
 
 </html>
