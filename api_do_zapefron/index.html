@@ -15,24 +15,12 @@
         Mensagem Zapironga ZapEfron
     </header>
     <section>
-        <input type="tel" id="phone" placeholder="Número">
-        <input type="text" id="text" placeholder="Mensagem">
-        <button type="submit" onclick="enviar()">Enviar</button>
+        <form action="https://api.whatsapp.com/send?" method="GET">
+            <input type="tel" name="phone" placeholder="Número">
+            <input type="text" name="text" placeholder="Mensagem">
+            <button type="submit">Enviar</button>
+        </form>
     </section>
-
-    <script>
-        function enviar() {
-            var data = {
-                phone: '55' + document.getElementById("phone").value,
-                text: document.getElementById("text").value
-            };
-
-            if (data.phone != '' && data.text != '') {
-                const params = $.param(data);
-                window.open(`https://api.whatsapp.com/send?${params}`);
-            }
-        }
-    </script>
 </body>
 
 </html>
